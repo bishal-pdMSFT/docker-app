@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "bishalbugbashaks-12de"
+    labels:
+        app: "bishalbugbashaks-12de"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: bishalbugbashaksfb7b-bishalbugbashaks-12de.01d4a105bd4546febc77.southindia.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "bishalbugbashaks-12de"
+                servicePort: 80
