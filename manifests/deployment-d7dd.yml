@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "bishalbugbashaks-fccf"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "bishalbugbashaks-fccf"
+  template:
+    metadata:
+      labels:
+        app: "bishalbugbashaks-fccf"
+    spec:
+      containers:
+        - name: "bishalbugbashaks-fccf"
+          image: "bishalcontainer1acr.azurecr.io/bishalbugbashaksbf80"
+          ports:
+          - containerPort: 80
